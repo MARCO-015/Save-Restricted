@@ -1,17 +1,3 @@
-# ---------------------------------------------------
-# File Name: login.py
-# Description: A Pyrogram bot for downloading files from Telegram channels or groups 
-#              and uploading them back to Telegram.
-# Author: Gagan
-# GitHub: https://github.com/devgaganin/
-# Telegram: https://t.me/team_spy_pro
-# YouTube: https://youtube.com/@dev_gagan
-# Created: 2025-01-11
-# Last Modified: 2025-01-11
-# Version: 2.0.5
-# License: MIT License
-# ---------------------------------------------------
-
 from pyrogram import filters, Client
 from devgagan import app
 import random
@@ -81,7 +67,7 @@ async def generate_session(_, message):
         
     user_id = message.chat.id   
     
-    number = await _.ask(user_id, 'Please enter your phone number along with the country code. \nExample: +19876543210', filters=filters.text)   
+    number = await _.ask(user_id, 'Please enter your phone number along with the country code. \nExample: +1234567890', filters=filters.text)   
     phone_number = number.text
     try:
         await message.reply("📲 Sending OTP...")
@@ -128,4 +114,4 @@ async def generate_session(_, message):
     string_session = await client.export_session_string()
     await db.set_session(user_id, string_session)
     await client.disconnect()
-    await otp_code.reply("✅ Login successful!")
+    await otp_code.reply("✅ Login successful!\n𝕮𝖗𝖊𝖆𝖙𝖊𝖉 𝕭𝖞: 𝗔𝗝 𝗣𝗬𝗧𝗛𝗢𝗡 💀")
