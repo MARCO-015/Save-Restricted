@@ -68,7 +68,7 @@ async def token_handler(client, message):
         ])
          
         await message.reply_photo(
-            msg.photo.file_id,
+            photo=image_url,
             caption=(
                 "Hi Dear,\nWelcome to My Restricted Bot\n\n"
                 "⇛ I can extract posts from channels or groups where forwarding is off.\nI can download videos/audio from YT, INSTA,& Other social platforms\n"
