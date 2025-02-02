@@ -70,9 +70,9 @@ async def token_handler(client, message):
         await message.reply_photo(
             msg.photo.file_id,
             caption=(
-                "Hi Dear, Welcome to My Restricted Bot\n\n"
+                "Hi Dear,\nWelcome to My Restricted Bot\n\n"
                 "⇛ I can extract posts from channels or groups where forwarding is off.\nI can download videos/audio from YT, INSTA,& Other social platforms\n"
-                "⇛ Simply send the post link of public channel. Or For private channels, do /login.\nSend /help to know more.\n\n𝕮𝖗𝖊𝖆𝖙𝖊𝖉 𝕭𝖞: 𝗔𝗝 𝗣𝗬𝗧𝗛𝗢𝗡 💀"
+                "⇛ Simply send the post link of public channel. Or For private channels, do /login.\n⇛ Send /help to know more.\n\n𝕮𝖗𝖊𝖆𝖙𝖊𝖉 𝕭𝖞: 𝗔𝗝 𝗣𝗬𝗧𝗛𝗢𝗡 💀"
             ),
             reply_markup=keyboard
         )
