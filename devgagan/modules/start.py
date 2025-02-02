@@ -1,13 +1,3 @@
-# Author: AJ_PYTHON
-# GitHub: https://github.com/devgaganin/
-# Telegram: https://t.me/team_spy_pro
-# YouTube: https://youtube.com/@dev_gagan
-# Created: 2025-01-11
-# Last Modified: 2025-01-11
-# Version: 2.0.5
-# License: MIT License
-# ---------------------------------------------------
-
 from pyrogram import filters
 from devgagan import app
 from config import OWNER_ID
@@ -27,34 +17,34 @@ async def set(_, message):
         return
      
     await app.set_bot_commands([
-        BotCommand("start", "🚀 Start the bot"),
-        BotCommand("batch", "🫠 Extract in bulk"),
-        BotCommand("login", "🔑 Get into the bot"),
-        BotCommand("logout", "🚪 Get out of the bot"),
-        BotCommand("token", "🎲 Get 3 hours free access"),
-        BotCommand("adl", "👻 Download audio from 30+ sites"),
-        BotCommand("dl", "💀 Download videos from 30+ sites"),
-        BotCommand("freez", "🧊 Remove all expired user"),
-        BotCommand("pay", "₹ Pay now to get subscription"),
+        BotCommand("start", "**Start the bot**"),
+        BotCommand("batch", "**Extract in bulk**"),
+        BotCommand("login", "**Get into the bot**"),
+        BotCommand("logout", "**Get out of the bot**"),
+        BotCommand("token", "**Get 3 hours free access**"),
+        BotCommand("adl", "**Download audio from 30+ sites**"),
+        BotCommand("dl", "**Download videos from 30+ sites**"),
+        BotCommand("freez", "**Remove all expired user**"),
+        BotCommand("pay", "**Pay now to get subscription**"),
         BotCommand("status", "⟳ Refresh Payment status"),
         BotCommand("transfer", "💘 Gift premium to others"),
-        BotCommand("myplan", "⌛ Get your plan details"),
+        BotCommand("myplan", "**Get your plan details**"),
         BotCommand("add", "➕ Add user to premium"),
         BotCommand("rem", "➖ Remove from premium"),
-        BotCommand("session", "🧵 Generate Pyrogramv2 session"),
-        BotCommand("settings", "⚙️ Personalize things"),
-        BotCommand("stats", "📊 Get stats of the bot"),
+        BotCommand("session", "**Generate Pyrogramv2 session**"),
+        BotCommand("settings", "**Personalize things**"),
+        BotCommand("stats", "**Get stats of the bot**"),
         BotCommand("plan", "🗓️ Check our premium plans"),
-        BotCommand("terms", "🥺 Terms and conditions"),
-        BotCommand("speedtest", "🚅 Speed of server"),
-        BotCommand("get", "🗄️ Get all user IDs"),
-        BotCommand("lock", "🔒 Protect channel from extraction"),
-        BotCommand("gcast", "⚡ Broadcast message to bot users"),
-        BotCommand("help", "❓ If you're a noob, still!"),
-        BotCommand("cancel", "🚫 Cancel batch process")
+        BotCommand("terms", "**Terms and conditions**"),
+        BotCommand("speedtest", "**Speed of server**"),
+        BotCommand("get", "**Get all user IDs**"),
+        BotCommand("lock", "**Protect channel from extraction**"),
+        BotCommand("gcast", "**Broadcast message to bot users**"),
+        BotCommand("help", "**If you're a noob, still!**"),
+        BotCommand("cancel", "**Cancel batch process**")
     ])
  
-    await message.reply("✅ Commands configured successfully!")
+    await message.reply("Commands Execution Successfully!")
  
  
  
@@ -106,7 +96,7 @@ help_pages = [
         "> 4. REPLACEWORDS : Can be used for words in deleted set via REMOVE WORDS\n"
         "> 5. RESET : To set the things back to default\n\n"
         "> You can set CUSTOM THUMBNAIL, PDF WATERMARK, VIDEO WATERMARK, SESSION-based login, etc. from settings\n\n"
-        "**__Powered by Team SPY__**"
+        "**__𝕮𝖗𝖊𝖆𝖙𝖊𝖉 𝕭𝖞: 𝗔𝗝 𝗣𝗬𝗧𝗛𝗢𝗡__**"
     )
 ]
  
@@ -180,7 +170,7 @@ async def terms(client, message):
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📋 See Plans", callback_data="see_plan")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/kingofpatal")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/AJ_PYTHON_15")],
         ]
     )
     await message.reply_text(terms_text, reply_markup=buttons)
@@ -189,7 +179,7 @@ async def terms(client, message):
 @app.on_message(filters.command("plan") & filters.private)
 async def plan(client, message):
     plan_text = (
-        "> 💰 **Premium Price**:\n\n Starting from $2 or 200 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).\n"
+        "💰 **Premium Price**:\n\n Starting from $2 or 250 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).\n"
         "📥 **Download Limit**: Users can download up to 100,000 files in a single batch command.\n"
         "🛑 **Batch**: You will get two modes /bulk and /batch.\n"
         "   - Users are advised to wait for the process to automatically cancel before proceeding with any downloads or uploads.\n\n"
@@ -199,7 +189,7 @@ async def plan(client, message):
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📜 See Terms", callback_data="see_terms")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/kingofpatal")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/AJ_PYTHON_15_15")],
         ]
     )
     await message.reply_text(plan_text, reply_markup=buttons)
@@ -218,7 +208,7 @@ async def see_plan(client, callback_query):
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📜 See Terms", callback_data="see_terms")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/kingofpatal")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/AJ_PYTHON)")],
         ]
     )
     await callback_query.message.edit_text(plan_text, reply_markup=buttons)
@@ -236,7 +226,7 @@ async def see_terms(client, callback_query):
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📋 See Plans", callback_data="see_plan")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/kingofpatal")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/AJ_PYTHON_15")],
         ]
     )
     await callback_query.message.edit_text(terms_text, reply_markup=buttons)
