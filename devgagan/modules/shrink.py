@@ -1,18 +1,4 @@
  
-# ---------------------------------------------------
-# File Name: shrink.py
-# Description: A Pyrogram bot for downloading files from Telegram channels or groups 
-#              and uploading them back to Telegram.
-# Author: Gagan
-# GitHub: https://github.com/devgaganin/
-# Telegram: https://t.me/team_spy_pro
-# YouTube: https://youtube.com/@dev_gagan
-# Created: 2025-01-11
-# Last Modified: 2025-01-11
-# Version: 2.0.5
-# License: MIT License
-# ---------------------------------------------------
-
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import random
@@ -73,9 +59,9 @@ async def token_handler(client, message):
     msg = await app.get_messages(chat_id, 796)
     user_id = message.chat.id
     if len(message.command) <= 1:
-        image_url = "https://i.postimg.cc/v8q8kGyz/startimg-1.jpg"
-        join_button = InlineKeyboardButton("Join Channel", url="https://t.me/team_spy_pro")
-        premium = InlineKeyboardButton("Get Premium", url="https://t.me/kingofpatal")   
+        image_url = "https://envs.sh/m5J.jpg"
+        join_button = InlineKeyboardButton("Join Channel", url="https://t.me/AJ_PYTHON_WORLD")
+        premium = InlineKeyboardButton("Get Premium", url="https://t.me/AJ_PYTHON_15")   
         keyboard = InlineKeyboardMarkup([
             [join_button],   
             [premium]    
@@ -84,9 +70,9 @@ async def token_handler(client, message):
         await message.reply_photo(
             msg.photo.file_id,
             caption=(
-                "Hi 👋 Welcome, Wanna intro...?\n\n"
-                "✳️ I can save posts from channels or groups where forwarding is off. I can download videos/audio from YT, INSTA, ... social platforms\n"
-                "✳️ Simply send the post link of a public channel. For private channels, do /login. Send /help to know more."
+                "Hi Dear, Welcome to My Restricted Bot\n\n"
+                "⇛ I can extract posts from channels or groups where forwarding is off.\nI can download videos/audio from YT, INSTA,& Other social platforms\n"
+                "⇛ Simply send the post link of public channel. Or For private channels, do /login.\nSend /help to know more.\n\n𝕮𝖗𝖊𝖆𝖙𝖊𝖉 𝕭𝖞: 𝗔𝗝 𝗣𝗬𝗧𝗛𝗢𝗡 💀"
             ),
             reply_markup=keyboard
         )
@@ -121,7 +107,7 @@ async def smart_handler(client, message):
      
     freecheck = await chk_user(message, user_id)
     if freecheck != 1:
-        await message.reply("You are a premium user no need of token 😉")
+        await message.reply("You are a premium user no need of token 😉\nAuthorized By: AJ PYTHON")
         return
     if await is_user_verified(user_id):
         await message.reply("✅ Your free session is already active enjoy!")
